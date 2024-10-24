@@ -1,0 +1,873 @@
+{
+	"info": {
+		"_postman_id": "21320554-ced3-4990-b69d-36536f366d45",
+		"name": "Pic Share Golang",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14637974"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Follow",
+					"item": [
+						{
+							"name": "Follow User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/user/:user_id/follow",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										":user_id",
+										"follow"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Follow User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/user/:user_id/follow",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										":user_id",
+										"follow"
+									],
+									"query": [
+										{
+											"key": "order_by",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "order_type",
+											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "1",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Unfollow User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/user/:user_id/follow",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user",
+										":user_id",
+										"follow"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9tYXBpLjg1OTEuY29tLnR3XC9hcGlcL2xvZ2luXC9hdXRoZW50aWNhdGUiLCJpYXQiOjE3MjY4NTQ2NzcsImV4cCI6MTcyNjg2MTg3NywibmJmIjoxNzI2ODU0Njc3LCJqdGkiOiIybjd0eEVBZnpNY01aYXZEIiwic3ViIjoiMzk4MzM5MCIsInBydiI6ImE3ZGY0Mzg3Mjg4NDM2ZGFjYjlmYTJmNDhmZTMxNzI4YjE1OWFkM2MifQ.vwkYsHqMXL6e-wztPj3N7UIE1eN8Wjfws0zlBjvWzZo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"a121@a.com\",\n    \"password\": \"testtest\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "b60caf172868c5ce57b8d002e1cc123c0c2e0a8934464e753cf4171ea564cdd6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "a121@a.com",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "testtest",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/Users/yehjiajun/Pictures/IMG_6127.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/:user_id/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":user_id",
+								"profile"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/Users/yehjiajun/Pictures/IMG_6127.JPG"
+								},
+								{
+									"key": "nickname",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/user/:user_id/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":user_id",
+								"profile"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3e6d5b541d0753fbf4f0d1becc549ccfe506081468c89f3824c2b1a18581830a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/user/:user_id/post",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								":user_id",
+								"post"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Comment",
+					"item": [
+						{
+							"name": "Post Comment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"content\": \"test2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/post/:post_id/comment",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"post",
+										":post_id",
+										"comment"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "23"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Comment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"content\": \"test777\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/post/:post_id/comment/:comment_id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"post",
+										":post_id",
+										"comment",
+										":comment_id"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "23"
+										},
+										{
+											"key": "comment_id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Comment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/post/:post_id/comment/:comment_id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"post",
+										":post_id",
+										"comment",
+										":comment_id"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "23"
+										},
+										{
+											"key": "comment_id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Favorite",
+					"item": [
+						{
+							"name": "Add/Remove Favorite",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/post/:post_id/favorite",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"post",
+										":post_id",
+										"favorite"
+									],
+									"variable": [
+										{
+											"key": "post_id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Favorite Post",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/post/favorite?page=1&page_size=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"post",
+										"favorite"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "753ab68f6cba47a4f76e02d77a9307a9c64b53aacdbab46eefe2ba87e378f703",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "only_follow",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "test abc test5",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "stest",
+									"type": "text"
+								},
+								{
+									"key": "location_name",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/Users/yehjiajun/Pictures/worldskills-competition-2022-special-edition-silver-medallist-mobile-applications-development.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/post",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9b99e1619ac37c8a7bdd593d71667d2524d2f05dbbefecd2364d8775110b2269",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "public",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "test abc",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "sfdafdsafdsa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/post/:post_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"post",
+								":post_id"
+							],
+							"variable": [
+								{
+									"key": "post_id",
+									"value": "19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9b99e1619ac37c8a7bdd593d71667d2524d2f05dbbefecd2364d8775110b2269",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/api/post/:post_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"post",
+								":post_id"
+							],
+							"variable": [
+								{
+									"key": "post_id",
+									"value": "18"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Public Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/post/public?order_type=asc&tag=test5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"public"
+							],
+							"query": [
+								{
+									"key": "order_type",
+									"value": "asc"
+								},
+								{
+									"key": "content",
+									"value": "test",
+									"disabled": true
+								},
+								{
+									"key": "page_size",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "tag",
+									"value": "test5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3e6d5b541d0753fbf4f0d1becc549ccfe506081468c89f3824c2b1a18581830a",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/post/:post_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"post",
+								":post_id"
+							],
+							"variable": [
+								{
+									"key": "post_id",
+									"value": "24"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
